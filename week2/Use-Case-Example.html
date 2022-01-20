@@ -1,0 +1,100 @@
+<html>
+<head>
+  <title>Use Case Example</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h1 style="text-align: center; color: navy">
+Use Case Example</h1>
+
+
+<h2>Example of a Brief Use Case</h2>
+
+<table align="center" border="1">
+  <tbody>
+    <tr>
+      <td><pre class="code">UC1: Purchase Ticket
+
+A customer arrives at Ticket Machine and selects the zone he wants to
+travel to. Ticket Machine displays price for traveling to that zone.
+As the customer enters coins the machine reduces the amount to enter 
+(shown on display) by the coin value, until it reaches zero. 
+Then the Ticket Machine creates and dispenses a ticket with the fair
+value, and returns any change.
+</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Structure of a Fully Dressed Use Case</h2>
+
+<p>
+This is the Use Case template suggested by Alistair Cockburn and used in the
+textbook. Other templates and examples are on the class home page. </p>
+
+<table border="1" align="center">
+  <tbody>
+    <tr>
+      <td>
+        <div>
+        <dl>
+          <dt><b>UC1: Purchase Ticket</b> </dt>
+            <dd>Customer purchases a ticket at Skytrain ticket machine. </dd>
+          <dt><b>Scope</b> </dt>
+            <dd>Skytrain ticket machine </dd>
+          <dt><b>Level</b> </dt>
+            <dd>user goal (other levels are: subfunction, component, system)
+            </dd>
+          <dt><b>Primary Actor</b> </dt>
+            <dd>Customer (<em>who requests services from the software?</em>)
+            </dd>
+          <dt><b>Stakeholders and their interests</b> </dt>
+            <dd><em>this section is sometimes called "secondary actors" or
+              "other actors"</em> <br>
+              <b>Customer</b> wants fast, reliable purchase of ticket <br>
+              <b>Management</b> wants reliable system, recording of
+              transactions with totals </dd>
+          <dt><b>Preconditions</b> </dt>
+            <dd><em>don't list obvious things</em> <br>
+              No transaction is in-process at the ticket machine. 
+			  Ticket machine has adequate supply of coins and tickets.
+			</dd>
+          <dt><b>Main Success Scenario</b> </dt>
+            <dd><ol>
+                <li>Customer selects zone.</li>
+                <li>System displays ticket price.</li>
+                <li>Customer inserts coin. </li>
+                <li>System deducts coin value from displayed price and updates
+                  display. </li>
+                <li>Repeat steps 3-4 until value of coins equals or exceeds
+                  ticket price. </li>
+                <li>System enters ticket value and current date/time
+                  onto ticket. </li>
+                <li>System issues ticket and any change to customer. </li>
+                <li>Customer takes ticket and change.</li>
+              </ol>
+            </dd>
+          <dt><b>Alternative Flows</b> or Extensions</dt>
+            <dd>3a1. Customer cancels transaction.<br>
+              3a2. Ticket machine refunds coin(s) entered by customer.<br>
+              3b1. Customer selects a different zone<br>
+              3b2. Ticket price is recomputed and new price is shown.<br>
+            </dd>
+          <dt><b>Open Issues</b> </dt>
+            <dd>1. Can customer select a different zone <em>after</em>
+              inserting some coins? </dd>
+          <dt><b>Business Rules</b> </dt>
+            <dd><em>reference</em> to any business rules. The business rules
+              are in a separate document; don't repeat them here. </dd>
+        </dl>
+        </div>
+      </td>
+    </tr>
+	</tbody>
+    </table>
+
+</body>
+</html>
