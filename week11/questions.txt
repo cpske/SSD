@@ -1,0 +1,87 @@
+## Homework
+
+1. Match these items to the most suitable Layer
+
+- Django Web Framework
+- Django RestFramework
+- web request handlers written by us (Django calls these "views")
+- web pages written as templates using Jinja2, Vue.js, and CSS
+- model classes for a web app, written as subclasses of Django Model class
+- Google OAuth Service to authenticate users
+- python-decouple package
+- Python Requests library or Urllib for making web requests
+
+2. If function calls between layers go from upper to lower layers, then how can a lower layer notify a high layer that the high layer needs to do something or get updated information?  What design pattern is used?
+
+3. In the UP, what is the most common way to implement an application with a layered architecture:
+   [ ] implement one layer per iteration, starting at the bottom
+   [ ] implement one layer per iteration, starting at the top
+   [ ] implement functionality that creates a vertical slice through all layers
+   [ ] implement some packages in a layer per iteration
+
+4. In a logical view of software, what's the difference between a "layer" and a "partition"?
+
+> Partitions a horizontal division of related classes/packages within a layer. (A partition could also span layers.)
+
+5. What design can we use to reduce the number of dependencies between layers, or between packages, with the benefit of "hiding" internal details of how a layer's services are implemented.
+
+> Create a Facade
+
+6. The choice of "layers" is somewhat arbitrary.  That is, you could define your own "layers" based on some criteria.  In the questions below, describe 2 criteria or characteristics that are useful in deciding what should be considered a "layer".
+
+Saruj: the purpose of this question is to make students think about what is a layer and how they might be defined.  Accept any reasonable, well-reasoned answer.  The important part is reasoning.
+
+6.1 first characteristic or criteria
+
+6.2 second characteristic or criteria
+
+Good characteristics:
+
+1. choose layers based on level of abstraction.
+2. choose layers in a way that the services exposed between layers have the smallest possible interface.
+3. choose layers in a way that the implementation can be replaced with a different implementation that provides the same services, and the change would only affect adjacent layers.
+
+---
+
+## In-class
+
+1. Name some common layers used in software. Describe their purpose or what services they provide.
+
+- Presentation - Web Views, Vue.js front-end
+- Application - Web session management logic, authentication
+- Domain - Vaccination Records, Vaccine Schedule, Vaccination Reports
+- Technical Services - Logback,  EclipseLink Framework (JPA), REST API, Web Framework
+- Foundation - utilities like Apache Commons, JDBC, JRE API
+
+2. In a layered design, which layer depends on which other layer (in terms of relative position)? E.g. upper to lower or lower to upper?
+
+3. In design, what can we do to minimize coupling between layers? There has to be *some* coupling, but we'd like to avoid one layer depending on many classes in another layer.
+
+4. Which layers tend to be more reusable?  Lower layers or higher layers?
+
+
+5. Consider a single aspect of an application: authentication.
+   How could the authentication code be divided among layers?
+
+   - login and logout pages
+   - deciding whether a user should have access to a page (URL)
+   - user roles and their priveleges
+   - LDAP API or OAuth API to authenticate users
+   - OpenLDAP server or Google OAuth services
+   - secure communications library to send/receive requests to OpenLDAP or Googla OAuth services
+
+6. How do you decide the boundaries between layers? (p. 467)
+
+   - separation of concerns between layers.  Higher layers are more application specific.
+   - reduce coupling between layers
+   - layers provide a "logical segmentation"
+   - layer provides distinct services and level of abstration. As a result...
+   - the implementation of a layer can be replaced by a different implementation without changing the rest of the application.  At worst, adjacent layers need to be changed.
+
+Some other criteria:
+
+   - Session management should be done by Application layer, not Domain layer
+
+   - Some standard services such as logging could be classified as either Technical Services layer or Foundation layer
+
+
