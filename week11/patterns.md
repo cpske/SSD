@@ -92,22 +92,29 @@ Comparator<String> compByLength = (s1,s2) -> s1.length() - s2.length();
 Complete the pattern table for this example.
 
 
-## Structural Patterns
+### 3. Structural Design Patterns
 
-Structural Design Patterns are concerned with the definition of classes.
+Complete the table of structural patterns.
 
-The Structural Patterns in the original GoF Patterns Book are:
+Note: some web sites have very *poor* descriptions of design patterns.
+These sites have poor description and I suggest you avoid them: "geekforgeeks.org", "tutspoint.com".
 
-| Pattern  | Intent |
-|----------|--------|
-| Adapter  | Adapt a class's interface to another interface that a client expects. |
-| Bridge   | Decouple an abstraction from its implementation so that the two can vary independently. |
-| Composite | Compose objects into collections so that clients can treat individual objects and composite objects the same. |
-| Decorator | Add new responsibilities to a class or object, without modifying the original class's code. |
-| Facade | Provide a unified interface to a set of interfaces in a subsystem. |
-| Flyweight | Enable objects to be shared (reused) to reduce number of objects, by externalizing state. |
-| Proxy | Provide a surrogate or placeholder for another object to control access to it. |
+Another structural pattern that is useful to know is the *Bridge Pattern*.
 
-You have already seen Adapter, Composite, and Decorator many times.
+### 4. Improve Code by Applying a Pattern
 
+This code gets petrol fuel prices for Thailand from a web service.
+The "main" block prints the prices on the console.
+
+<https://github.com/jbrucker/fuelprice>
+
+The fuel prices can change at most once per day (at the start of the day),
+so its inefficient to repeatedly call the web service every time the
+code is run.
+
+- Describe in words how to improve the code.  What pattern would you use?
+
+- We don't want to make this code more complex. How would you implement your improvements without adding new code?  Include a UML class diagram of your idea (paste the image into your Google Doc).
+
+- Are there any minor structural changes you would make to the `FuelPrice` class to make it easier to apply the pattern?
 
