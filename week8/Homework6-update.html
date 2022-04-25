@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title>Homework 6 Modeling Problem</title>
+  <meta name="generator" content="editplus">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+ </head>
+
+ <body>
+
+ <h1>Homework 6 Modeling Problem</h1>
+
+ <p>
+ <b>Due:</b> 3 October 2012, in class
+ </p>
+ <blockquote>
+ Do this problem <b>individually</b>. Don't work in groups.
+ Submit your solution on paper in class.
+ </blockquote>
+ 
+ <h2>Olympics Scorekeeper</h2>
+  <p>
+  The Olympics Gymnastics consists of events or competitions,
+  such as "Parallel bars".
+  Each event has one or more rounds.
+  In each round, the contestants perform and are evaluated by 
+  a panel of judges.
+  <p>
+  After each contestant's performance (in a single round), 
+  the judges each award a score to the performance;
+  the score is a number --
+  usually a floating point number between 0 and 10 with one
+  decimal digit, such as 8.7.
+  The judges' scores are combined to get a 
+  single score for the contestant's performance.
+  <br/>
+  <em>How the judges scores</em> are combined may vary: 
+  in some events the judges' scores are simply averaged 
+  (often the highest and lowest scores are discarded and
+  the rest are averaged).
+  In other events the judges scores are averaged and then 
+  multiplied by a difficulty factor for the contestant's performance
+  (e.g. a "triple flip" may have a difficulty factor of 3.2).
+  <p>
+  If the event has more than one round, then the contestant's final
+  score is the sum of his scores from each round.
+  The winner of the event is the contestant with the highest total
+  score.
+
+  <ol>
+  <li>
+      Construct a domain model 
+      for the olympics gymnastics.
+      The model should be able to handle multiple events.
+	  <br/>&nbsp;<br/>
+  <li>
+      Assign these responsibilities to classes: 
+    <ul>
+	<li>
+	  assign score (judge awards a score to a performance)
+	<li>
+	  know all the scores for a contestant -- know the individual
+	  scores from each judge for each round
+	<li>
+	  compute a contestant's overall score for a single performance
+	<li>
+	  compute a contestant's total score (total of all performances)
+	<li>
+	  rank the contestants and compute the winner
+	<li>
+	  know the judges -- how do we get the judges for a competition?
+	<li>
+	  know the contestants -- who are the contestants in a competition?
+    </ul>
+	<br/>&nbsp;<br/>
+   </li>
+   <li>
+      Name as least one more responsibility. You can include
+	  <em>creation</em> responsibilities.
+   </ol>
+
+   <h3>What to Submit</h3>
+   <ol>
+   <li>
+    A class diagram that shows the above information.
+	Its a software or implementation level class diagram since it
+	includes assignment of responsibilities, and may include
+	<em>pure fabrication</em> classes.
+    <br/>&nbsp;<br/>
+   <li>
+    A table giving the <em>reason</em> why you assigned each
+	responsibility to each class.  Reasons should be clear 
+	and concise. GRASP principles and LRG are good reasons.
+	"High cohesion" is not sufficient reason -- you must explain how
+	an assignment achieves higher cohesion than other choices.
+	
+	<table align="center" border="1" width="90%">
+	<tr>
+	<th>Responsibility</th> <th>Assigned to</th> <th width="50%">Reason</th>
+	</tr>
+	<tr valign="top">
+	<td>Assign score<br>for performance</td>
+	<td><em>which class?</em></td>
+	<td><em>why?</em>
+	</td>
+	</tr>
+	</table>
+	</ol>
+ </body>
+</html>

@@ -1,0 +1,9 @@
+1. According to Larman, what is the single most fundamental ability or skill in Object-Oriented Analysis & Design
+   - ability to skillfully assign responsibilities to software components
+
+2. The UP stands for what:
+   - UML Development Process
+   - Ultimate Software Development Process
+   - Open 
+
+3. Name each of these UP Phases (p. 19, pdf 36)

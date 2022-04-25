@@ -1,0 +1,16 @@
+# Text for https://sequencediagram.org
+
+title Register for Courses
+
+loop for each course
+Student->System:Select 'Registration' item
+System-->Student:Registration page 
+Student->System:course ID
+System-->Student:list of available courses matching course ID
+Student->System: register course/section
+System->System: verify Student can register in course/section
+System->System: add course to registration
+System-->Student: updated list of registered courses
+end
+Student->System: show Registration Results (ผลการลงทะเบียน)
+System-->Student:Registered courses
